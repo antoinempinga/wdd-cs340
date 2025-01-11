@@ -1,6 +1,100 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* Global styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #F0F0F0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+.vehiculemo {
+  width: 100px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #F0F0F0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Vehicle Container Styles */
+.vehicle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vehicle {
+  position: relative; /* To position the description in front of the vehicle image */
+  width: calc(33.33% - 20px); /* Adjust for 3 columns with spacing */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.vehicle img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+/* Description style */
+.car-description {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-top: 1px solid #ccc;
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+  .vehicle-container {
+    flex-direction: column;
+  }
+
+  .vehicle {
+    width: 100%;
+  }
 }
