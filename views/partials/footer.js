@@ -1,5 +1,6 @@
 <% const d = new Date()
 let year = d.getFullYear() %>
 <footer>
-  <p class="copyright">& copy ; <%= year %>, CSE 340 App</p>
+  <p>&copy; Copyright 2024 CSE Motors. All Rights Reserved.</p>
+  <a href="/trigger-error">Trigger 500 Error</a>
 </footer>
